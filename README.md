@@ -7,7 +7,7 @@ In this activity, I am building a weather dashboard that displays the current we
 ## Installation:
 
 - If you need to pull my code for this homework, please visit my Github repository at: https://github.com/selma-e/hw6_weather_dashboard
-- If you want to see the final webpage for my code, please visit my hosted website at: https://selma-e.github.io/hw2_bootstrap_responsive_portfolio/
+- If you want to see the final webpage for my code, please visit my hosted website at: https://selma-e.github.io/hw6_weather_dashboard/
 
 ## Usage:
 
