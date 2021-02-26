@@ -4,50 +4,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css" />
 </head>
 
 <body>
-    <form id="search-form">
-        <div class="form-group">
-          <label for="city-input">Add City</label>
-          <input type="text" class="form-control" id="city-input">
+    <div class="container">
+        <h1>Weather Dashboard</h1>
+
+        <div class="row">
+
+            
+            <div class="col-md-3">
+                
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="city-name" placeholder="Search City">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="button" id="searchBtn">Search</button>
+                    </div>
+                </div>
+                
+                <ul class="list-group list-group-flush" id="city-history">
+                </ul>
+            </div>
+
+            
+            <div class="col-md-9">
+                
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body" id="forecast-card">
+
+                                <h2 id="searchedName"></h2>
+                                <img id="currentIcon"><br>
+                                <div id="currentDate"></div><br>
+
+                                <label for="currentTemp">Temperature: </label>
+                                <div style="display: inline" id="currentTemp"></div><br>
+
+                                <label for="currentHumid">Humidity: </label>
+                                <div id="currentHumid"></div><br>
+
+                                <label for="currentWind">Wind Speed: </label>
+                                <div id="currentWind"></div><br>
+
+                                <label for="currentUV">UV Index: </label>
+                                <div id="currentUV"></div><br>
+
+                            </div>
+                        </div>
+                    </div>
+                </div><br>
+                <div class="row mt-5">
+                    <h5 id="5d-forecast" class="bg-light d-none py-2 w-100" >5-Day Forecast: </h5>
+                </div>
+                <div class="row">                    
+                    <div class="card-deck text-white w-100" id="forecastCard">
+                    </div>                                             
+                </div>
+            </div>
+
         </div>
-        <button type="submit" class="btn btn-primary" disabled>Submit</button>
-      </form>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
-    </script>
-    <script src="script.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+            </script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+            </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+            </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+        <script src="./script.js"></script>
+
 </body>
 
 </html>
-
-<!-- 
-user form input searches city
-    - click event handler
-display current weather
-    - display city name
-    - display date
-    - add an icon of weather conditions
-    - add temperature
-    - add humidity
-    - add the wind speed
-    - add the uv index
-        - display green, yellow, or red color for favorable, moderate, or severe uv index
-display future weather
-    - present future 5 days
-    - display date
-    - add an icon of weather conditions
-    - add temperature
-    - add humidity
-add to search history/local storage
-    - when clicking on city in local storage, it shows weather updates for it
-    - always presented with last searched city
- -->

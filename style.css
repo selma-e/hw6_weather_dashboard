@@ -1,0 +1,61 @@
+#city-history {
+  list-style-type: none;
+}
+
+#searchedName,
+#currentIcon,
+#currentDate,
+#currentHumid,
+#currentWind,
+#currentUV {
+  display: inline;
+}
+
+#currentDate {
+  font-size: smaller;
+}
+
+label {
+  font-weight: bold;
+}
+
+.low {
+  background-color: lightgreen;
+  padding: 5px;
+}
+.med {
+  background-color: yellow;
+  padding: 5px;
+}
+.hi {
+  background-color: lightsalmon;
+  padding: 5px;
+}
+.veryhi {
+  background-color: rgb(236, 101, 91);
+  padding: 5px;
+}
+.exhi {
+  background-color: rgb(174, 128, 184);
+  padding: 5px;
+}
+
+.forecastBody {
+  background-color: rgb(73, 120, 190);
+}
+
+h1 {
+  background-color: rgb(48, 47, 47);
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+li {
+  align-content: left;
+  padding: 10px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: gray;
+  border-radius: 5px;
+}
